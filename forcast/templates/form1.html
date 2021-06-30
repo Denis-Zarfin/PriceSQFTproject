@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   .btn {
+    display: inline-block;
+    background: #8C959D;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+   }
+  </style>
+ </head>
+ <body>
+  <a href="/" class="btn" action="/">HOME PAGE</a>
+
+
+<form class="form-horizontal" action="/getForecast">
+   <br/>
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>FILL IN THE TABLE</legend>
+         <br/>
+<b> Prediction of PRICE PER SQUARE FOOT</b>
+     <br/>
+
+<!-- Text input-->
+<div class="form-group">
+    <br/>
+
+  <div class="form-group">
+  <div class="col-md-4">
+  NOMINAL PRICE : <input id="PRICE_NOM" name="PRICE_NOM" type="text" placeholder="NOMINAL PRICE " class="form-control input-md"> <span>min : 0 , max : 6075000</span>
+          <br/>
+          <br/>
+  CHANGE :  <select class="form-control" id="CHANGE" name="CHANGE">
+
+      <option value ="2">Significant Rise</option>
+      <option value="1">Rise</option>
+      <option value="3">Stable</option>
+      <option value="0">Decline</option>
+      <option value="-1">Other</option>
+  </select>
+      <br/>
+          <br/>
+  <div class="form-group">
+  <div class="col-md-4">
+   SALE : <input id="SALE" name="SALE" type="text" placeholder="SALE" class="form-control input-md"> <span>min : 0 , max : 181</span>
+          <br/>
+          <br/>
+        COST :  <select class="form-control" id="COST" name="COST">
+
+            <option value ="0">High</option>
+            <option value="2">Medium</option>
+            <option value="1">Low</option>
+            <option value="-1">Other</option>
+        </select>
+        <br/>
+          <br/>
+  <div class="form-group">
+  <div class="col-md-4">
+   YEAR : <input id="YEAR" name="YEAR" type="text" placeholder="YEAR" class="form-control input-md"> <span>min : 2006 , max : 2021</span>
+          <br/>
+          <br/>
+            <div class="form-group">
+  <div class="col-md-4">
+   NOMINAL CHANGE : <input id="CHANGE_NOM" name="CHANGE_NOM" type="text" placeholder="NOMINAL CHANGE" class="form-control input-md"> <span>min : -1 , max : 0.95</span>
+          <br/>
+          <br/>
+                  <div class="form-group">
+  <div class="col-md-4">
+   TRACT : <input id="TRACT" name="TRACT" type="text" placeholder="TRACT" class="form-control input-md"> <span>min : 100 , max : 26500</span>
+          <br/>
+   <!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <br>
+      <input type="submit" value="Submit" id="submit" >
+  </div>
+</div>
+</fieldset>
+</form>
+</body>
