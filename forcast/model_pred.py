@@ -31,5 +31,6 @@ def prediction(User_parameters):
     res = res[0][0]
     return round(res)
 
+
 if __name__ == '__main__':
     prediction()
