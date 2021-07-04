@@ -1,15 +1,15 @@
-sed = 10
+seed_distribution = 10
 import os
 
-os.environ['PYTHONHASHSEED'] = str(sed)
+os.environ['PYTHONHASHSEED'] = str(seed_distribution)
 import tensorflow as tf
 import random
 import pandas as pd
 import numpy as np
 
-tf.random.set_seed(sed)
-np.random.seed(sed)
-random.seed(sed)
+tf.random.set_seed(seed_distribution)
+np.random.seed(seed_distribution)
+random.seed(seed_distribution)
 from tensorflow.keras.models import load_model
 import pickle
 
