@@ -1,15 +1,14 @@
-sed = 10
+seed_distribution = 10
 import os
-
-os.environ['PYTHONHASHSEED'] = str(sed)
+os.environ['PYTHONHASHSEED'] = str(seed_distribution)
 import tensorflow as tf
 import random
 import pandas as pd
 import numpy as np
 
-tf.random.set_seed(sed)
-np.random.seed(sed)
-random.seed(sed)
+tf.random.set_seed(seed_distribution)
+np.random.seed(seed_distribution)
+random.seed(seed_distribution)
 from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 from keras.models import Sequential
@@ -72,7 +71,6 @@ def train_the_model():
     save the model and StandardScaler parameters
     """
     df = pd.read_sql('select * from SQL_project8', conn)
-    print(df)
     x = df.iloc[:, 1:]
     y = df.iloc[:, 0]
     x = np.array(x)
@@ -110,11 +108,13 @@ def train_the_model():
 
 
 if __name__ == '__main__':
+    seconds_per_week = 700000
+    seconds_per_day = 86400
     while True:
         try:
             selenium_func()
             etl()
             train_the_model()
-            time.sleep(800000)
+            time.sleep(seconds_per_week)
         except:
-            time.sleep(86400)
+            time.sleep(seconds_per_day)
